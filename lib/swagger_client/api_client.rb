@@ -49,7 +49,6 @@ module SwaggerClient
     def call_api(http_method, path, opts = {})
       request = build_request(http_method, path, opts)
       response = request.run
-      binding.pry
 
       if @config.debugging
         @config.logger.debug "HTTP response body ~BEGIN~\n#{response.body}\n~END~\n"
